@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="Moviper Viper managed Fragment"
+    description="It creates a Viper-managed Fragment bound to empty implementation of ViperFragmentPresenter with
+    appropriate Contract and relatives - Interactor and Routing."
+    minApi="8"
+    minBuildApi="8">
+
+    <category value="Other" />
+
+    <parameter
+        id="className"
+        name="Fragment name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="ViperFragment"
+        help="The name of the Viper-managed Fragment class to create" />
+
+    <parameter
+        id="createViewHelper"
+        name="Create ViewHelper for advanced Android transitions?"
+        type="boolean"
+        default="true"
+        help="Create ViewHelper that allows Routing accessing Fragment android.Views to allow Routing perform
+        advanced transitions." />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
