@@ -15,7 +15,6 @@ import ${viperPackage}.presenter.${prefix}Presenter;
 import com.hannesdorfmann.mosby.mvp.MvpFragment;
 
 public class ${prefix}Fragment
-        // you can change base class to any Mosby Fragment, ie. MvpLceFragment, MvpViewStateFragment, etc.
         extends MvpFragment<${prefix}Contract.View, ${prefix}Contract.Presenter>
         implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
 
