@@ -11,7 +11,6 @@ import ${viperPackage}.presenter.${prefix}Presenter;
 import com.hannesdorfmann.mosby.mvp.MvpActivity;
 
 public class ${prefix}Activity
-        // you can change base class to any Mosby Activity, ie. MvpLceActivity, MvpViewStateActivity, etc.
         extends MvpActivity<${prefix}Contract.View, ${prefix}Contract.Presenter>
         implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
 
