@@ -1,14 +1,11 @@
-<#if applicationPackage??>
 package ${viperPackage}.routing;
-</#if>
 
 import android.support.annotation.NonNull;
 import android.app.Activity;
 
 import com.mateuszkoslacz.moviper.base.routing.ActivityBaseViewHelperRxRouting;
-<#if applicationPackage??>
-import ${applicationPackage}.viper.contract.${prefix}Contract;
-</#if>
+
+import ${viperPackage}.contract.${prefix}Contract;
 
 public class ${prefix}Routing
         extends ActivityBaseViewHelperRxRouting<

@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <recipe>
+    <#include "../common/recipe_manifest.xml.ftl" />
 
     <instantiate from="root/res/layout/activity_layout.xml.ftl"
                    to="${escapeXmlAttribute(resOut)}/layout/activity_${classToResource(className)}.xml" />
 
     <instantiate from="root/src/app_package/Activity.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${className}.java" />
+                   to="${viperOut}/view/activity/${prefix}Activity.java" />
 
     <instantiate from="root/src/app_package/Interactor.java.ftl"
                    to="${viperOut}/interactor/${prefix}Interactor.java" />

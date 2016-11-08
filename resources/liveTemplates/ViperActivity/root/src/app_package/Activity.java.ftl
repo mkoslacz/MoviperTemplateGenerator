@@ -1,13 +1,12 @@
-package ${packageName};
+package ${viperPackage}.view.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
-<#if applicationPackage??>
-import ${applicationPackage}.R;
+import ${appPackage}.R;
 import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
-</#if>
+
 import com.hannesdorfmann.mosby.mvp.MvpActivity;
 
 public class ${prefix}Activity

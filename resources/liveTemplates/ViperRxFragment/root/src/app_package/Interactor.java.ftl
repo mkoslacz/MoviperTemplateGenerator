@@ -1,9 +1,8 @@
-<#if applicationPackage??>
 package ${viperPackage}.interactor;
-</#if>
-<#if applicationPackage??>
+
+import com.mateuszkoslacz.moviper.base.interactor.BaseRxInteractor;
+
 import ${viperPackage}.contract.${prefix}Contract;
-</#if>
 
 public class ${prefix}Interactor
         extends BaseRxInteractor

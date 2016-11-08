@@ -1,16 +1,13 @@
-<#if applicationPackage??>
 package ${viperPackage}.presenter;
-</#if>
 
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
 import com.mateuszkoslacz.moviper.base.presenter.ViperFragmentBaseRxPresenter;
-<#if applicationPackage??>
+
 import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.routing.${prefix}Routing;
 import ${viperPackage}.interactor.${prefix}Interactor;
-</#if>
 
 public class ${prefix}Presenter
         extends ViperFragmentBaseRxPresenter
