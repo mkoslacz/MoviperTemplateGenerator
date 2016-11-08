@@ -26,6 +26,13 @@
         help="Create ViewHelper that allows Routing accessing Activity android.Views to allow Routing perform
         advanced transitions." />
 
+    <parameter
+        id="isLauncher"
+        name="Launcher Activity"
+        type="boolean"
+        default="false"
+        help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
 

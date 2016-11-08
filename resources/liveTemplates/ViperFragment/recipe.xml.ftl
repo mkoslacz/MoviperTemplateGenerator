@@ -5,7 +5,7 @@
                    to="${escapeXmlAttribute(resOut)}/layout/fragment_${classToResource(className)}.xml" />
 
     <instantiate from="root/src/app_package/Fragment.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${className}.java" />
+                   to="${viperOut}/view/fragment/${prefix}Fragment.java" />
 
     <instantiate from="root/src/app_package/Interactor.java.ftl"
                    to="${viperOut}/interactor/${prefix}Interactor.java" />

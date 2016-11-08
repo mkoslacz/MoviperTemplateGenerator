@@ -1,6 +1,4 @@
-<#if applicationPackage??>
 package ${viperPackage}.contract;
-</#if>
 
 import com.hannesdorfmann.mosby.mvp.MvpPresenter;
 import com.hannesdorfmann.mosby.mvp.MvpView;

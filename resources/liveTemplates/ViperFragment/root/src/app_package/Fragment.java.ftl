@@ -1,4 +1,4 @@
-package ${packageName};
+package ${viperPackage}.view.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,11 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-<#if applicationPackage??>
-import ${applicationPackage}.R;
+import ${appPackage}.R;
 import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
-</#if>
+
 import com.hannesdorfmann.mosby.mvp.MvpFragment;
 
 public class ${prefix}Fragment
