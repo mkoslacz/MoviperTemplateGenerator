@@ -24,11 +24,9 @@ Because it's the easiest way for me to manage these templates and hopefully, in 
 
 ## Known issues
 
-- Generated Activity isn't added to `AndroidManifest.xml`.
 - There is no possibility to generate other Moviper Fragments and Activities than Viper ones (Wipe and Perv are also available in the library).
 - A copy-paste installation is kinda problematic.
 - The copy-paste installation will not migrate with Android Studio updates.
-- If you name your Activity or Fragment in non conventional way, weird stuff happens.
 
 ## Credits
 
