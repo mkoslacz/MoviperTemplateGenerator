@@ -15,7 +15,7 @@
         name="ViewHolder name"
         type="string"
         constraints="class|nonempty|unique"
-        default="ViperViewHolder"
+        suggest="ViperViewHolder"
         help="The name of the Viper-managed ViewHolder class to create" />
 
     <parameter
@@ -25,6 +25,13 @@
         default="true"
         help="Create ViewHelper that allows Routing accessing ViewHolder android.Views to allow Routing perform
         advanced transitions." />
+
+	<parameter
+	    id="createEntity"
+	    name="Create related entity?"
+	    type="boolean"
+	    default="false"
+	    help="Generate an empty entity for the ViewHolder" />
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />

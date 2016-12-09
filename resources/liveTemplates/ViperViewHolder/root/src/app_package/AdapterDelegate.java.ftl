@@ -18,8 +18,7 @@ public class ${prefix}AdapterDelegate extends AdapterDelegate<List<ListingItem>>
 
     @Override
     protected boolean isForViewType(@NonNull List<ListingItem> items, int position) {
-		//example: return items.get(position).getType() == ListingItem.TYPE_PRODUCT;
-		return false;
+		return items.get(position).getType() == ${prefix}ListingItem.TYPE;
     }
 
     @NonNull
