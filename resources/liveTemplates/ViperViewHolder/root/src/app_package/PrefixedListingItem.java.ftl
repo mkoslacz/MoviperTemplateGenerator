@@ -15,7 +15,7 @@ public class ${prefix}ListingItem implements ListingItem {
 		return TYPE;
     }
 
-    public Object get${prefix}() {
+    public Object getObject() {
         return mObject;
     }
 }
