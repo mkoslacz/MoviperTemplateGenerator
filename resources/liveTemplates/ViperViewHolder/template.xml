@@ -27,6 +27,13 @@
         advanced transitions." />
 
 	<parameter
+		id="createDelegate"
+		name="Create related AdapterDelegate?"
+		type="boolean"
+		default="true"
+		help="This option requires to include additional library to your project" />
+
+	<parameter
 	    id="createEntity"
 	    name="Create related entity?"
 	    type="boolean"

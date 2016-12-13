@@ -13,10 +13,12 @@
    <instantiate from="root/src/app_package/Presenter.java.ftl"
                    to="${viperOut}/presenter/${prefix}Presenter.java" />
 
-   <instantiate from="root/src/app_package/AdapterDelegate.java.ftl"
-                   to="${viperOut}/view/adapter/delegate/${prefix}AdapterDelegate.java" />
-
    
+<#if createDelegate>
+	<instantiate from="root/src/app_package/AdapterDelegate.java.ftl"
+                 	  to="${viperOut}/view/adapter/delegate/${prefix}AdapterDelegate.java" />
+</#if>
+
 <#if createEntity>
 	<instantiate from="root/src/app_package/with_entity/Entity.java.ftl"
 		               to="${viperOut}/entity/${prefix}.java" />
