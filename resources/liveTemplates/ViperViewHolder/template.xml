@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="Moviper Viper managed ViewHolder"
+    description="It creates a Viper-managed ViewHolder bound to empty implementation of ViperViewHolderPresenter with
+    appropriate Contract and relatives - Interactor and Routing."
+    minApi="8"
+    minBuildApi="8">
+
+    <category value="Other" />
+
+    <parameter
+        id="className"
+        name="ViewHolder name"
+        type="string"
+        constraints="class|nonempty|unique"
+        suggest="ViperViewHolder"
+        help="The name of the Viper-managed ViewHolder class to create" />
+
+    <parameter
+        id="createViewHelper"
+        name="Create ViewHelper for advanced Android transitions?"
+        type="boolean"
+        default="true"
+        help="Create ViewHelper that allows Routing accessing ViewHolder android.Views to allow Routing perform
+        advanced transitions." />
+
+	<parameter
+		id="createDelegate"
+		name="Create related AdapterDelegate?"
+		type="boolean"
+		default="true"
+		help="This option requires to include additional library to your project" />
+
+	<parameter
+		id="createAggregate"
+		name="Create custom aggregate name?"
+		type="boolean"
+		default="false"
+		help="By default it's DisplayableItem" />
+
+	<parameter
+		id="customAggregateName"
+		name="Aggregate name"
+		type="string"
+		visibility="createAggregate" />
+
+	<parameter
+	    id="createEntity"
+	    name="Create related entity?"
+	    type="boolean"
+	    default="false"
+	    help="Generate an empty entity for the ViewHolder" />
+
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
