@@ -33,6 +33,13 @@
         default="false"
         help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
 
+	<parameter 
+		id="viewState" 
+		name="ViewState handling" 
+		type="boolean" 
+		default="false" 
+		help="Add ViewState handling by inheriting from Mosby-based ViewStateActivty" /> 
+ 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
 

@@ -13,7 +13,9 @@ public interface ${prefix}Contract {
     }
 
     interface View extends MvpView {
-
+        <#if viewState>interface State { 
+                void setState(int state); 
+        }</#if> 
     }
 
     interface Interactor extends MoviperRxInteractor {
