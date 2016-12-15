@@ -1,10 +1,10 @@
 package ${viperPackage}.contract;
 
 import com.hannesdorfmann.mosby.mvp.MvpPresenter;
-import com.hannesdorfmann.mosby.mvp.MvpView;
+import com.mateuszkoslacz.moviper.iface.view.MvpViewHolder;
+import com.mateuszkoslacz.moviper.iface.viewhelper.MoviperViewHelper;
 import com.mateuszkoslacz.moviper.iface.interactor.MoviperRxInteractor;
 import com.mateuszkoslacz.moviper.iface.routing.MoviperViewHelperRxRouting;
-import com.mateuszkoslacz.moviper.iface.viewhelper.MoviperViewHelper;
 
 public interface ${prefix}Contract {
 
@@ -12,11 +12,8 @@ public interface ${prefix}Contract {
 
     }
 
-    interface View extends MvpView {
+    interface View extends MvpViewHolder<Object> {
 
-		<#if viewState>interface State {
-            void setState(int state);
-		}</#if>
     }
 
     interface Interactor extends MoviperRxInteractor {
@@ -30,5 +27,6 @@ public interface ${prefix}Contract {
     interface ViewHelper extends MoviperViewHelper {
 
     }
+
 }
 
