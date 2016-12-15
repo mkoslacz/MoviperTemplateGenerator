@@ -17,7 +17,7 @@ public class ${prefix}ViewHolder
 
     @Override
     public ${prefix}Contract.Presenter createPresenter() {
-        return new ${prefix}Presenter(itemView);
+        return new ${prefix}Presenter();
     }
 }
 
