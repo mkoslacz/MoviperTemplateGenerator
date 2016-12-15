@@ -2,13 +2,13 @@
 <template
     format="5"
     revision="1"
-    name="Moviper Viper managed Activity"
+    name="Viper managed Activity"
     description="It creates a Viper-managed Activity bound to empty implementation of ViperActivityPresenter with
     appropriate Contract and relatives - Interactor and Routing."
     minApi="8"
     minBuildApi="8">
 
-    <category value="Other" />
+    <category value="Moviper" />
 
     <parameter
         id="className"
