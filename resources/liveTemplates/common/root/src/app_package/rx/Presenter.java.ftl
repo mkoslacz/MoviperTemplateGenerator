@@ -3,7 +3,6 @@ package ${viperPackage}.presenter;
 import android.support.annotation.NonNull;
 
 import com.mateuszkoslacz.moviper.base.presenter.BaseRxPresenter;
-
 import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.routing.${prefix}Routing;
 import ${viperPackage}.interactor.${prefix}Interactor;
