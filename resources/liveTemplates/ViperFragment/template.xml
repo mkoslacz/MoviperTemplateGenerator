@@ -26,6 +26,13 @@
         help="Create ViewHelper that allows Routing accessing Fragment android.Views to allow Routing perform
         advanced transitions." />
 
+	<parameter
+		id="viewState"
+		name="Enable ViewState handling"
+		type="boolean"
+		default="false"
+		help="Add ViewState handling by inheriting from Mosby-based ViewStateFragment" />
+
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
 

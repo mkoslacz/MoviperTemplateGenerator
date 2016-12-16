@@ -14,6 +14,11 @@
    <instantiate from="../common/root/src/app_package/rx/Presenter.java.ftl"
                    to="${viperOut}/presenter/${prefix}Presenter.java" />
 
+<#if viewState> 
+  <instantiate from="../common/root/src/app_package/ViewState.java.ftl" 
+                   to="${viperOut}/view/viewstate/${prefix}ViewState.java" /> 
+</#if>
+
 <#if createViewHelper>    
     <instantiate from="../common/root/src/app_package/rx/ViewHelperContract.java.ftl"
                    to="${viperOut}/contract/${prefix}Contract.java" />
