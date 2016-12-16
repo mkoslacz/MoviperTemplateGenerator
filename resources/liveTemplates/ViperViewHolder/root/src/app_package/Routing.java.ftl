@@ -1,18 +1,11 @@
 package ${viperPackage}.routing;
 
-import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.view.View;
-
-import com.mateuszkoslacz.moviper.base.routing.ViewHolderBaseRxRouting;
+import com.mateuszkoslacz.moviper.base.routing.BaseRxRouting;
 import ${viperPackage}.contract.${prefix}Contract;
 
 public class ${prefix}Routing
-        extends ViewHolderBaseRxRouting
+        extends BaseRxRouting
         implements ${prefix}Contract.Routing {
 
-    public ${prefix}Routing(@NonNull View view) {
-        super((Activity) view.getContext());
-    }
 }
 

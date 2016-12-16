@@ -1,34 +1,33 @@
 package ${viperPackage}.contract;
 
-import com.hannesdorfmann.mosby.mvp.MvpPresenter;
-import com.mateuszkoslacz.moviper.iface.view.MvpViewHolder;
-import com.mateuszkoslacz.moviper.iface.viewhelper.MoviperViewHelper;
-import com.mateuszkoslacz.moviper.iface.interactor.MoviperRxInteractor;
-import com.mateuszkoslacz.moviper.iface.routing.MoviperViewHelperRxRouting;
+import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;
+import com.mateuszkoslacz.moviper.iface.view.MvpDataView;
+import com.mateuszkoslacz.moviper.iface.viewhelper.ViperViewHelper;
+import com.mateuszkoslacz.moviper.iface.interactor.ViperRxInteractor;
+import com.mateuszkoslacz.moviper.iface.routing.ViperViewHelperRxRouting;
 <#if createEntity>
 import ${viperPackage}.entity.${prefix};
 </#if>
 public interface ${prefix}Contract {
 
-    interface Presenter extends MvpPresenter<View> {
+    interface Presenter extends ViperPresenter<View> {
 
     }
 
-    interface View extends MvpViewHolder<<#if createEntity>${prefix}<#else>Object</#if>> {
+    interface View extends MvpDataView<<#if createEntity>${prefix}<#else>Object</#if>> {
 
     }
 
-    interface Interactor extends MoviperRxInteractor {
+    interface Interactor extends ViperRxInteractor {
 
     }
 
-    interface Routing extends MoviperViewHelperRxRouting<ViewHelper> {
+    interface Routing extends ViperViewHelperRxRouting<ViewHelper> {
 
     }
 
-    interface ViewHelper extends MoviperViewHelper {
+    interface ViewHelper extends ViperViewHelper {
 
     }
 
 }
-
