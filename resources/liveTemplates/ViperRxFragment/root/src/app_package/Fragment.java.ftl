@@ -10,11 +10,10 @@ import android.view.ViewGroup;
 import ${appPackage}.R;
 import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
-
-import com.hannesdorfmann.mosby.mvp.MvpFragment;
+import com.mateuszkoslacz.moviper.base.view.fragment.ViperFragment;
 
 public class ${prefix}Fragment
-        extends MvpFragment<${prefix}Contract.View, ${prefix}Contract.Presenter>
+        extends ViperFragment<${prefix}Contract.View, ${prefix}Contract.Presenter>
         implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
 
     @Nullable
@@ -26,6 +25,6 @@ public class ${prefix}Fragment
     @NonNull
     @Override
     public ${prefix}Contract.Presenter createPresenter() {
-        return new ${prefix}Presenter(this);
+        return new ${prefix}Presenter();
     }
 }

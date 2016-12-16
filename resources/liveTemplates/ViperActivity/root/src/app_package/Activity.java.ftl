@@ -6,11 +6,10 @@ import android.support.annotation.NonNull;
 import ${appPackage}.R;
 import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
-
-import com.hannesdorfmann.mosby.mvp.MvpActivity;
+import com.mateuszkoslacz.moviper.base.view.activity.ViperActivity;
 
 public class ${prefix}Activity
-        extends MvpActivity<${prefix}Contract.View, ${prefix}Contract.Presenter>
+        extends ViperActivity<${prefix}Contract.View, ${prefix}Contract.Presenter>
         implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
 
     @Override
@@ -22,6 +21,6 @@ public class ${prefix}Activity
     @NonNull
     @Override
     public ${prefix}Contract.Presenter createPresenter() {
-        return new ${prefix}Presenter(this);
+        return new ${prefix}Presenter();
     }
 }
