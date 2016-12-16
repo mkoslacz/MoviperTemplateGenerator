@@ -2,13 +2,13 @@
 <template
     format="5"
     revision="1"
-    name="Moviper Viper managed RxFragment"
+    name="Viper RxFragment"
     description="It creates a Viper-managed Fragment bound to empty implementation of ViperFragmentPresenter with
     appropriate Contract and relatives - Interactor and Routing."
     minApi="8"
     minBuildApi="8">
 
-    <category value="Other" />
+    <category value="Moviper" />
 
     <parameter
         id="className"
