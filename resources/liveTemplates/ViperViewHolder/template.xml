@@ -15,7 +15,7 @@
         name="ViewHolder name"
         type="string"
         constraints="class|nonempty|unique"
-        suggest="ViperViewHolder"
+        suggest="MoviperViewHolder"
         help="The name of the Viper-managed ViewHolder class to create" />
 
     <parameter
@@ -43,6 +43,7 @@
 	<parameter
 		id="customAggregateType"
 		name="Aggregate type"
+		suggest="ListingItem"
 		type="string"
 		visibility="createAggregate" />
 
