@@ -9,7 +9,7 @@ import ${viperPackage}.entity.${prefix};
 
 public class ${prefix}ViewHolder
         extends ViperViewHolder<${prefix}, ${prefix}Contract.View, ${prefix}Contract.Presenter>
-        implements ${prefix}Contract.View {
+        implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
 
 	public ${prefix}ViewHolder(View itemView) {
 		    super(itemView);
