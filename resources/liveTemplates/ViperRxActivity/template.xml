@@ -15,7 +15,7 @@
         name="Activity name"
         type="string"
         constraints="class|nonempty|unique"
-        default="ViperActivity"
+        default="MoviperActivity"
         help="The name of the Viper-managed Activity class to create" />
 
     <parameter
