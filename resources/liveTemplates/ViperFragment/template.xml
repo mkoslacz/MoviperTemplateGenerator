@@ -15,7 +15,7 @@
         name="Fragment name"
         type="string"
         constraints="class|nonempty|unique"
-        default="ViperFragment"
+        default="MoviperFragment"
         help="The name of the Viper-managed Fragment class to create" />
 
     <parameter
