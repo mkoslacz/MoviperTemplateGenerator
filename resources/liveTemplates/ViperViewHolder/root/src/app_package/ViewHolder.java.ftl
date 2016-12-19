@@ -1,5 +1,6 @@
 package ${viperPackage}.view.viewholder;
 
+import android.support.annotation.NonNull;
 import android.view.View;
 
 import com.mateuszkoslacz.moviper.base.view.ViperViewHolder;
@@ -15,6 +16,7 @@ public class ${prefix}ViewHolder
 	}
 
     @Override
+    @NonNull
     public ${prefix}Contract.Presenter createPresenter() {
         return new ${prefix}Presenter();
     }
