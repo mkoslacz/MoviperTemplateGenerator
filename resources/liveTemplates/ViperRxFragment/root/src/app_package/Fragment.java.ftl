@@ -16,7 +16,7 @@ import ${viperPackage}.view.viewstate.${prefix}ViewState;</#if>
 
 public class ${prefix}Fragment
         extends Viper<#if viewState>ViewState</#if>Fragment
-        <${prefix}Contract.View,,
+        <${prefix}Contract.View,
                 ${prefix}Contract.Presenter<#if viewState>,
                 ${prefix}ViewState</#if>>
         implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
