@@ -23,5 +23,5 @@
 
 	<global
 		id="aggregateName"
-		value="<#if createAggregate>${customAggregateType?replace("Item", "")?replace(" ", "")?trim}<#else>Listing</#if>"/>
+		value="${customAggregateType?replace("Item", "")?replace(" ", "")?trim}"/>
 </globals>

@@ -34,18 +34,10 @@
 		help="This option requires to include additional library to your project" />
 
 	<parameter
-		id="createAggregate"
-		name="Create custom aggregate type?"
-		type="boolean"
-		default="false"
-		help="By default it's ListingItem" />
-
-	<parameter
 		id="customAggregateType"
 		name="Aggregate type"
-		suggest="ListingItem"
 		type="string"
-		visibility="createAggregate" />
+		constraints="class|nonempty" />
 
 	<parameter
 	    id="createEntity"
