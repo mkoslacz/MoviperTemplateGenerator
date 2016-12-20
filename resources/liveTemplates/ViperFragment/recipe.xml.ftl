@@ -7,23 +7,28 @@
     <instantiate from="root/src/app_package/Fragment.java.ftl"
                    to="${viperOut}/view/fragment/${prefix}Fragment.java" />
 
-    <instantiate from="root/src/app_package/Interactor.java.ftl"
+    <instantiate from="../common/root/src/app_package/Interactor.java.ftl"
                    to="${viperOut}/interactor/${prefix}Interactor.java" />
 
-   <instantiate from="root/src/app_package/Presenter.java.ftl"
+   <instantiate from="../common/root/src/app_package/Presenter.java.ftl"
                    to="${viperOut}/presenter/${prefix}Presenter.java" />
 
+<#if viewState> 
+  <instantiate from="../common/root/src/app_package/ViewState.java.ftl" 
+                   to="${viperOut}/view/viewstate/${prefix}ViewState.java" /> 
+</#if>
+
 <#if createViewHelper>    
-    <instantiate from="root/src/app_package/ViewHelperContract.java.ftl"
+    <instantiate from="../common/root/src/app_package/ViewHelperContract.java.ftl"
                    to="${viperOut}/contract/${prefix}Contract.java" />
 
-    <instantiate from="root/src/app_package/ViewHelperRouting.java.ftl"
+    <instantiate from="../common/root/src/app_package/ViewHelperRouting.java.ftl"
                    to="${viperOut}/routing/${prefix}Routing.java" />
 <#else>
-    <instantiate from="root/src/app_package/Contract.java.ftl"
+    <instantiate from="../common/root/src/app_package/Contract.java.ftl"
                    to="${viperOut}/contract/${prefix}Contract.java" />
 
-    <instantiate from="root/src/app_package/Routing.java.ftl"
+    <instantiate from="../common/root/src/app_package/Routing.java.ftl"
                    to="${viperOut}/routing/${prefix}Routing.java" />
 </#if>
 

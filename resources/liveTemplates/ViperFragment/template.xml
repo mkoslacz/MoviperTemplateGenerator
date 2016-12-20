@@ -2,13 +2,13 @@
 <template
     format="5"
     revision="1"
-    name="Moviper Viper managed Fragment"
+    name="Viper Fragment"
     description="It creates a Viper-managed Fragment bound to empty implementation of ViperFragmentPresenter with
     appropriate Contract and relatives - Interactor and Routing."
     minApi="8"
     minBuildApi="8">
 
-    <category value="Other" />
+    <category value="Moviper" />
 
     <parameter
         id="className"
@@ -25,6 +25,13 @@
         default="true"
         help="Create ViewHelper that allows Routing accessing Fragment android.Views to allow Routing perform
         advanced transitions." />
+
+	<parameter
+		id="viewState"
+		name="Enable ViewState handling"
+		type="boolean"
+		default="false"
+		help="Add ViewState handling by inheriting from Mosby-based ViewStateFragment" />
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
