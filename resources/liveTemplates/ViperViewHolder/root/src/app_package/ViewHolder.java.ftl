@@ -8,7 +8,7 @@ import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
 
 public class ${prefix}ViewHolder
-        extends ViperViewHolder<Object, ${prefix}Contract.View, ${prefix}Contract.Presenter>
+        extends ViperViewHolder<Object/*TODO: Change to your own entity*/, ${prefix}Contract.View, ${prefix}Contract.Presenter>
         implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
 
 	public ${prefix}ViewHolder(View itemView) {

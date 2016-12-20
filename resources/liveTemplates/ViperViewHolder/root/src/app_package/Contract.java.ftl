@@ -13,7 +13,7 @@ public interface ${prefix}Contract {
 
     }
 
-    interface View extends MvpDataView<<#if createEntity>${prefix}<#else>Object</#if>> {
+    interface View extends MvpDataView<<#if createEntity>${prefix}<#else>Object/*TODO: Change to your own entity*/</#if>> {
 
     }
 

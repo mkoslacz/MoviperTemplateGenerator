@@ -4,7 +4,7 @@ public class ${prefix}${aggregateName}Item implements ${aggregateName}Item {
 
 	public static int TYPE = ${prefix}${aggregateName}Item.class.hashCode();
 
-    //TODO: Add your own entity here
+    //TODO: Change to your own entity
     private Object mObject;
 
     public ${prefix}${aggregateName}Item(Object object) {
