@@ -34,7 +34,5 @@ public class ${prefix}AdapterDelegate extends AdapterDelegate<List<${aggregateNa
                                     @NonNull List<Object> payloads) {
         ${prefix}ViewHolder viewHolder = (${prefix}ViewHolder) holder;
         viewHolder.setDataObject(((${prefix}${aggregateName}Item) items.get(position)).get<#if createEntity>${prefix}()<#else>Object()</#if>);
-        viewHolder.bindPresenter();
     }
 }
-
