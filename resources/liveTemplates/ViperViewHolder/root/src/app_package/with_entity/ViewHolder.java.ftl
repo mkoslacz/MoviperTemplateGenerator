@@ -3,7 +3,7 @@ package ${viperPackage}.view.viewholder;
 import android.support.annotation.NonNull;
 import android.view.View;
 
-import com.mateuszkoslacz.moviper.base.view.ViperViewHolder;
+import com.mateuszkoslacz.moviper.base.view.viewholder.ViperViewHolder;
 import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
 import ${viperPackage}.entity.${prefix};
