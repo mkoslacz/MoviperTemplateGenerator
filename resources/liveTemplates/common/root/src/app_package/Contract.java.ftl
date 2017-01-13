@@ -1,5 +1,6 @@
 package ${viperPackage}.contract;
 
+import android.app.Activity;
 import com.hannesdorfmann.mosby.mvp.MvpView;
 import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;
 import com.mateuszkoslacz.moviper.iface.interactor.ViperInteractor;
@@ -27,7 +28,7 @@ public interface ${prefix}Contract {
 
     }
 
-    interface Routing extends ViperRouting<PresenterForRouting> {
+    interface Routing extends ViperRouting<Activity, PresenterForRouting> {
 
     }
 
