@@ -9,9 +9,9 @@ import ${viperPackage}.entity.${prefix};
 </#if>
 public interface ${prefix}Contract {
 
-    interface Presenter extends ViperPresenter<View> {
+    <#if !vhType?contains("Passive")>interface Presenter extends ViperPresenter<View> {
 
-    }
+    }</#if>
 
     interface View extends MvpDataView<<#if createEntity>${prefix}<#else>Object/*TODO: Change to your own entity*/</#if>> {
 
