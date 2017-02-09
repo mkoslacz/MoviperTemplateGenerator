@@ -3,12 +3,14 @@ package ${viperPackage}.view.viewholder;
 import android.support.annotation.NonNull;
 import android.view.View;
 
-import com.mateuszkoslacz.moviper.base.view.ViperViewHolder;
+import com.mateuszkoslacz.moviper.base.view.viewholder.<#if vhType != "ViperViewHolder">autoinject.<#if vhType?contains("Passive")>passive.</#if></#if>${vhType};<#if vhType?contains("Passive")>
+import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;</#if><#if vhType?contains("DataBinding")>
+import ${appPackage}.databinding.Viewholder${prefix}Binding;</#if>
 import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
 
 public class ${prefix}ViewHolder
-        extends ViperViewHolder<Object/*TODO: Change to your own entity*/, ${prefix}Contract.View, ${prefix}Contract.Presenter>
+        extends ${vhType}<Object/*TODO: Change to your own entity*/, ${prefix}Contract.View<#if !vhType?contains("Passive")>, ${prefix}Contract.Presenter</#if><#if vhType?contains("DataBinding")>, Viewholder${prefix}Binding</#if>>
         implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
 
 	public ${prefix}ViewHolder(View itemView) {
@@ -17,8 +19,13 @@ public class ${prefix}ViewHolder
 
     @Override
     @NonNull
-    public ${prefix}Contract.Presenter createPresenter() {
+    public <#if vhType?contains("Passive")>ViperPresenter<${prefix}Contract.View><#else>${prefix}Contract.Presenter</#if> createPresenter() {
         return new ${prefix}Presenter();
     }
+
+    <#if vhType == "ViperAiViewHolder" || vhType == "ViperAiPassiveViewHolder">@Override
+    protected void injectViews(View itemView) {
+        
+    }</#if>
 }
 

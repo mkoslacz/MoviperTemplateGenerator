@@ -1,5 +1,6 @@
 package ${viperPackage}.contract;
 
+import android.app.Activity;
 import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;
 import com.mateuszkoslacz.moviper.iface.view.MvpDataView;
 import com.mateuszkoslacz.moviper.iface.viewhelper.ViperViewHelper;
@@ -10,9 +11,9 @@ import ${viperPackage}.entity.${prefix};
 </#if>
 public interface ${prefix}Contract {
 
-    interface Presenter extends ViperPresenter<View> {
+    <#if !vhType?contains("Passive")>interface Presenter extends ViperPresenter<View> {
 
-    }
+    }</#if>
 
     interface View extends MvpDataView<<#if createEntity>${prefix}<#else>Object/*TODO: Change to your own entity*/</#if>> {
 
@@ -22,7 +23,7 @@ public interface ${prefix}Contract {
 
     }
 
-    interface Routing extends ViperViewHelperRxRouting<ViewHelper> {
+    interface Routing extends ViperViewHelperRxRouting<Activity, ViewHelper> {
 
     }
 

@@ -18,6 +18,20 @@
         suggest="MoviperViewHolder"
         help="The name of the Viper-managed ViewHolder class to create" />
 
+	<parameter
+		    id="vhType"
+		    name="ViewHolder type"
+		    type="enum"
+		    default="ViperViewHolder">
+		    <option id="ViperViewHolder" default="true">Default</option>
+		    <option id="ViperAiViewHolder">Autoinject</option>
+		    <option id="ViperButterKnifeViewHolder">Butterknife</option>
+		    <option id="ViperDataBindingViewHolder">DataBinding</option>
+			<option id="ViperAiPassiveViewHolder">Passive autoinject</option>
+			<option id="ViperButterKnifePassiveViewHolder">Passive butterknife</option>
+			<option id="ViperDataBindingPassiveViewHolder">Passive DataBinding</option>
+	</parameter>
+
     <parameter
         id="createViewHelper"
         name="Create ViewHelper for advanced Android transitions?"
