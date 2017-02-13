@@ -1,13 +1,12 @@
-package ${viperPackage}.contract;
+package ${viperPackage}.<#if packagesPerUseCase>${classToResource(className)}<#else>contract</#if>;
 
 import android.app.Activity;
 import com.hannesdorfmann.mosby.mvp.MvpView;
 import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;
 import com.mateuszkoslacz.moviper.iface.interactor.ViperRxInteractor;
-import com.mateuszkoslacz.moviper.iface.view.ViperView;
 import com.mateuszkoslacz.moviper.iface.routing.ViperRxRouting;
 
-public interface ${prefix}Contract {
+<#if !packagesPerUseCase>public </#if>interface ${prefix}Contract {
 
     interface Presenter extends ViperPresenter<View> {
 

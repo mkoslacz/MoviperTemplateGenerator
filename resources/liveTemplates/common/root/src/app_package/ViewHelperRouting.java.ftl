@@ -1,10 +1,10 @@
-package ${viperPackage}.routing;
+package ${viperPackage}.<#if packagesPerUseCase>${classToResource(className)}<#else>routing</#if>;
 
 import android.app.Activity;
 import com.mateuszkoslacz.moviper.base.routing.BaseViewHelperRouting;
-import ${viperPackage}.contract.${prefix}Contract;
+<#if !packagesPerUseCase>import ${viperPackage}.contract.${prefix}Contract;</#if>
 
-public class ${prefix}Routing
+<#if !packagesPerUseCase>public </#if>class ${prefix}Routing
         extends BaseViewHelperRouting
         <Activity,
         		${prefix}Contract.PresenterForRouting,
