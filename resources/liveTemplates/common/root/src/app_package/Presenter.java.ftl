@@ -1,12 +1,12 @@
-package ${viperPackage}.presenter;
+package ${viperPackage}.<#if packagesPerUseCase>${classToResource(className)}<#else>presenter</#if>;
 
 import android.support.annotation.NonNull;
 
 import com.mateuszkoslacz.moviper.base.presenter.BasePresenter;
-import ${viperPackage}.contract.${prefix}Contract;
+<#if !packagesPerUseCase>import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.routing.${prefix}Routing;
 import ${viperPackage}.interactor.${prefix}Interactor;
-
+</#if>
 public class ${prefix}Presenter
         extends BasePresenter
         <${prefix}Contract.View,

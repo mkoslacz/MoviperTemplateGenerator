@@ -8,8 +8,7 @@
         value="${projectOut}/src/main/java/${slashedPackageName(packageName)}" />
     <global
         id="prefix"
-        value="<#if className?contains("Activity")>${className?replace("Activity", "")}<#else>${className}</#if>"
-    />
+        value="<#if className?contains("Activity")>${className?replace("Activity", "")}<#else>${className}</#if>" />
     <global
         id="viperPackage"
         value="<#if applicationPackage??>${applicationPackage}<#else>${packageName}</#if>.viper" />
@@ -18,6 +17,5 @@
         value="<#if applicationPackage??>${applicationPackage}<#else>${packageName}</#if>" />
     <global
         id="viperOut"
-        value="${projectOut}/src/main/java/<#if applicationPackage??>${slashedPackageName(applicationPackage)}/<#else>${slashedPackageName(packageName)}/</#if>viper"
-    />
+        value="${projectOut}/src/main/java/<#if applicationPackage??>${slashedPackageName(applicationPackage)}/<#else>${slashedPackageName(packageName)}/</#if>viper" />
 </globals>

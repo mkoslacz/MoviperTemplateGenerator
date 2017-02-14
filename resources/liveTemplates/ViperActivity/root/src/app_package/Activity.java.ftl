@@ -1,14 +1,14 @@
-package ${viperPackage}.view.activity;
+package ${viperPackage}.<#if packagesPerUseCase>${classToResource(className)}<#else>view.activity</#if>;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 <#if viewState>
 import com.hannesdorfmann.mosby.mvp.viewstate.ViewState;</#if>
 import ${appPackage}.R;
-import ${viperPackage}.contract.${prefix}Contract;
+<#if !packagesPerUseCase>import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
-import com.mateuszkoslacz.moviper.base.view.activity.Viper<#if viewState>ViewState</#if>Activity;<#if viewState>
-import ${viperPackage}.view.viewstate.${prefix}ViewState;</#if>
+<#if viewState>import ${viperPackage}.view.viewstate.${prefix}ViewState;
+</#if></#if>import com.mateuszkoslacz.moviper.base.view.activity.Viper<#if viewState>ViewState</#if>Activity;
 
 public class ${prefix}Activity
         extends Viper<#if viewState>ViewState</#if>Activity

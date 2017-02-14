@@ -1,4 +1,4 @@
-package ${viperPackage}.view.fragment;
+package ${viperPackage}.<#if packagesPerUseCase>${classToResource(className)}<#else>view.fragment</#if>;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 <#if viewState>
 import com.hannesdorfmann.mosby.mvp.viewstate.ViewState;</#if>
 import ${appPackage}.R;
-import ${viperPackage}.contract.${prefix}Contract;
+<#if !packagesPerUseCase>import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
-import com.mateuszkoslacz.moviper.base.view.fragment.Viper<#if viewState>ViewState</#if>Fragment;<#if viewState>
-import ${viperPackage}.view.viewstate.${prefix}ViewState;</#if>
+<#if viewState>import ${viperPackage}.view.viewstate.${prefix}ViewState;
+</#if></#if>import com.mateuszkoslacz.moviper.base.view.fragment.Viper<#if viewState>ViewState</#if>Fragment;
 
 public class ${prefix}Fragment
         extends Viper<#if viewState>ViewState</#if>Fragment

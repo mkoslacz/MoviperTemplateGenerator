@@ -1,15 +1,15 @@
-package ${viperPackage}.view.viewstate; 
+package ${viperPackage}.<#if packagesPerUseCase>${classToResource(className)}<#else>view.viewstate</#if>; 
  
 import android.os.Bundle; 
 import android.support.annotation.NonNull; 
  
 import com.hannesdorfmann.mosby.mvp.viewstate.RestorableViewState; 
-import ${viperPackage}.contract.${prefix}Contract; 
- 
-public class ${prefix}ViewState 
+<#if !packagesPerUseCase>import ${viperPackage}.contract.${prefix}Contract; 
+ </#if>
+<#if !packagesPerUseCase>public </#if>class ${prefix}ViewState 
     implements RestorableViewState<${prefix}Contract.View>, ${prefix}Contract.View.State { 
  
-  private int mState; 
+    private int mState; 
  
     @Override 
     public void saveInstanceState(@NonNull Bundle out) { 

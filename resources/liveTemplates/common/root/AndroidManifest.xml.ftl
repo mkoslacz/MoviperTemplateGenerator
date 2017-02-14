@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <application>
-        <activity android:name=".viper.view.activity.${prefix}Activity"
+        <activity android:name=".viper.<#if packagesPerUseCase>${classToResource(className)}<#else>view.activity</#if>.${prefix}Activity"
             <#if generateActivityTitle!true>
                 <#if isNewProject>
                     android:label="@string/app_name"
