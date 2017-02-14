@@ -59,6 +59,13 @@
 	    type="boolean"
 	    default="false"
 	    help="Generate an empty entity for the ViewHolder" />
+        
+    <parameter
+        id="packagesPerUseCase"
+        name="Enable packaging per use case?"
+        type="boolean"
+        default="true"
+        help="If true, classes will be created in single package, if false, classes will be created in packages per VIPER elements" />
 
 
     <globals file="globals.xml.ftl" />

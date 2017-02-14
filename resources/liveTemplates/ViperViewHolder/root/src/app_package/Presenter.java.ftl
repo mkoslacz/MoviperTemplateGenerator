@@ -1,12 +1,12 @@
-package ${viperPackage}.presenter;
+package <#if !packagesPerUseCase>${viperPackage}.presenter<#else>${viewHolderCompontentsPackage}</#if>;
 
 import android.support.annotation.NonNull;
 
 import com.mateuszkoslacz.moviper.base.presenter.BaseRxPresenter;<#if vhType?contains("Passive")>
 import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;</#if>
-import ${viperPackage}.contract.${prefix}Contract;
+<#if !packagesPerUseCase>import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.routing.${prefix}Routing;
-import ${viperPackage}.interactor.${prefix}Interactor;
+import ${viperPackage}.interactor.${prefix}Interactor;</#if>
 
 public class ${prefix}Presenter
         extends BaseRxPresenter
