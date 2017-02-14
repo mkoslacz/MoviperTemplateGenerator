@@ -1,4 +1,4 @@
-package ${viperPackage}.view.adapter.delegate;
+package <#if !packagesPerUseCase>${viperPackage}.view.adapter.delegate<#else>${delegatesPackage}</#if>;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -6,11 +6,14 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.hannesdorfmann.adapterdelegates3.AdapterDelegate;
-import com.mateuszkoslacz.moviper.recyclerviewsample.R;
+import ${appPackage}.R;
 
-import ${viperPackage}.view.adapter.agregate.${aggregateName}Item;
+<#if !packagesPerUseCase>import ${viperPackage}.view.adapter.agregate.${aggregateName}Item;
 import ${viperPackage}.view.adapter.agregate.${prefix}${aggregateName}Item;
-import ${viperPackage}.view.viewholder.${prefix}ViewHolder;
+import ${viperPackage}.view.viewholder.${prefix}ViewHolder;<#else>
+import ${aggregatesPackage}.${aggregateName}Item;
+import ${aggregatesPackage}.${prefix}${aggregateName}Item;
+import ${viewHolderCompontentsPackage}.${prefix}ViewHolder;</#if>
 
 import java.util.List;
 

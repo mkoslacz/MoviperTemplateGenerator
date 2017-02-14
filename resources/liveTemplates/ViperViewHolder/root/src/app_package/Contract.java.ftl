@@ -1,14 +1,14 @@
-package ${viperPackage}.contract;
+package <#if !packagesPerUseCase>${viperPackage}.contract<#else>${viewHolderCompontentsPackage}</#if>;
 
 import android.app.Activity;
-import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;
-import com.mateuszkoslacz.moviper.iface.view.MvpDataView;
+<#if !vhType?contains("Passive")>import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;
+</#if>import com.mateuszkoslacz.moviper.iface.view.MvpDataView;
 import com.mateuszkoslacz.moviper.iface.interactor.ViperRxInteractor;
 import com.mateuszkoslacz.moviper.iface.routing.ViperRxRouting;
 <#if createEntity>
 import ${viperPackage}.entity.${prefix};
 </#if>
-public interface ${prefix}Contract {
+<#if !packagesPerUseCase>public </#if>interface ${prefix}Contract {
 
     <#if !vhType?contains("Passive")>interface Presenter extends ViperPresenter<View> {
 

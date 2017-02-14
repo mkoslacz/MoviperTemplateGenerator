@@ -1,4 +1,4 @@
-package ${viperPackage}.view.viewholder;
+package <#if !packagesPerUseCase>${viperPackage}.view.viewholder<#else>${viewHolderCompontentsPackage}</#if>;
 
 import android.support.annotation.NonNull;
 import android.view.View;
@@ -6,8 +6,8 @@ import android.view.View;
 import com.mateuszkoslacz.moviper.base.view.viewholder.<#if vhType != "ViperViewHolder">autoinject.<#if vhType?contains("Passive")>passive.</#if></#if>${vhType};<#if vhType?contains("Passive")>
 import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;</#if><#if vhType?contains("DataBinding")>
 import ${appPackage}.databinding.Viewholder${prefix}Binding;</#if>
-import ${viperPackage}.contract.${prefix}Contract;
-import ${viperPackage}.presenter.${prefix}Presenter;
+<#if !packagesPerUseCase>import ${viperPackage}.contract.${prefix}Contract;
+import ${viperPackage}.presenter.${prefix}Presenter;</#if>
 import ${viperPackage}.entity.${prefix};
 
 public class ${prefix}ViewHolder

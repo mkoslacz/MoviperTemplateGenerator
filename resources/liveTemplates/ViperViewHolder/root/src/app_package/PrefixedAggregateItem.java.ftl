@@ -1,4 +1,4 @@
-package ${viperPackage}.view.adapter.agregate;
+package <#if !packagesPerUseCase>${viperPackage}.view.adapter.agregate<#else>${aggregatesPackage}</#if>;
 
 public class ${prefix}${aggregateName}Item implements ${aggregateName}Item {
 
