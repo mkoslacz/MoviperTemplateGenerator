@@ -8,17 +8,20 @@ import android.view.View;
 import android.view.ViewGroup;
 <#if viewState>
 import com.hannesdorfmann.mosby.mvp.viewstate.ViewState;</#if>
-import ${appPackage}.R;
-<#if !packagesPerUseCase>import ${viperPackage}.contract.${prefix}Contract;
+import ${appPackage}.R;<#if type?contains("DataBinding")>
+import ${appPackage}.databinding.Fragment${prefix}Binding;</#if><#if !packagesPerUseCase>
+import ${viperPackage}.contract.${prefix}Contract;
 import ${viperPackage}.presenter.${prefix}Presenter;
-<#if viewState>import ${viperPackage}.view.viewstate.${prefix}ViewState;
-</#if></#if>import com.mateuszkoslacz.moviper.base.view.fragment.Viper<#if viewState>ViewState</#if>Fragment;
+<#if viewState>import ${viperPackage}.view.viewstate.${prefix}ViewState;</#if></#if>
+import com.mateuszkoslacz.moviper.base.view.fragment.<#if type != "">autoinject.</#if><#if passiveMode>passive.</#if><#if type?contains("DataBinding")>databinding.</#if><#if type?contains("ButterKnife")>butterknife.</#if>Viper${type}<#if viewState>ViewState</#if><#if passiveMode>Passive</#if>Fragment;<#if passiveMode>
+import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;</#if>
 
 public class ${prefix}Fragment
-        extends Viper<#if viewState>ViewState</#if>Fragment
-        <${prefix}Contract.View, 
-                ${prefix}Contract.Presenter<#if viewState>,
-                ${prefix}ViewState</#if>>
+        extends Viper${type}<#if viewState>ViewState</#if><#if passiveMode>Passive</#if>Fragment
+        <${prefix}Contract.View<#if !passiveMode>, 
+        ${prefix}Contract.Presenter</#if><#if viewState>,
+        ${prefix}ViewState</#if><#if type?contains("DataBinding")>, 
+        Fragment${prefix}Binding</#if>>
         implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
 
     @Nullable
@@ -29,7 +32,7 @@ public class ${prefix}Fragment
 
     @NonNull
     @Override
-    public ${prefix}Contract.Presenter createPresenter() {
+    public <#if passiveMode>ViperPresenter<${prefix}Contract.View><#else>${prefix}Contract.Presenter</#if> createPresenter() {
         return new ${prefix}Presenter();
     }
 
@@ -43,5 +46,17 @@ public class ${prefix}Fragment
     @Override  
     public void onNewViewStateInstance() {  
           
+    }</#if>
+    <#if type == "Ai" || type == "AiPassive">@Override
+    protected void injectViews(View itemView) {
+        
+    }</#if>  
+	<#if type == "Ai" || type == "AiPassive">@Override
+    protected void injectViews(View itemView) {
+        
+    }</#if>
+    <#if type != "">@Override
+    protected int getLayoutId() {
+        return R.layout.fragment_${classToResource(className)};
     }</#if>
 }
