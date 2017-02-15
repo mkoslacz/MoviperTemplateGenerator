@@ -8,17 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 <#if viewState>
 import com.hannesdorfmann.mosby.mvp.viewstate.ViewState;</#if>
-import ${appPackage}.R;
-<#if !packagesPerUseCase>import ${viperPackage}.contract.${prefix}Contract;
-import ${viperPackage}.presenter.${prefix}Presenter;
-<#if viewState>import ${viperPackage}.view.viewstate.${prefix}ViewState;
-</#if></#if>import com.mateuszkoslacz.moviper.base.view.fragment.Viper<#if viewState>ViewState</#if>Fragment;
+import ${appPackage}.R;<#if type?contains("DataBinding")>
+import ${appPackage}.databinding.Fragment${prefix}Binding;</#if><#if !packagesPerUseCase>
 import ${viperPackage}.contract.${prefix}Contract;
-import ${viperPackage}.presenter.${prefix}Presenter;<#if passiveMode>
-import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;</#if><#if type?contains("DataBinding")>
-import ${appPackage}.databinding.Fragment${prefix}Binding;</#if>
-import com.mateuszkoslacz.moviper.base.view.fragment.<#if type != "">autoinject.</#if><#if passiveMode>passive.</#if><#if type?contains("DataBinding")>databinding.</#if><#if type?contains("ButterKnife")>butterknife.</#if>Viper${type}<#if viewState>ViewState</#if><#if passiveMode>Passive</#if>Fragment;<#if viewState>
-import ${viperPackage}.view.viewstate.${prefix}ViewState;</#if>
+import ${viperPackage}.presenter.${prefix}Presenter;
+<#if viewState>import ${viperPackage}.view.viewstate.${prefix}ViewState;</#if></#if>
+import com.mateuszkoslacz.moviper.base.view.fragment.<#if type != "">autoinject.</#if><#if passiveMode>passive.</#if><#if type?contains("DataBinding")>databinding.</#if><#if type?contains("ButterKnife")>butterknife.</#if>Viper${type}<#if viewState>ViewState</#if><#if passiveMode>Passive</#if>Fragment;<#if passiveMode>
+import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;</#if>
 
 public class ${prefix}Fragment
         extends Viper${type}<#if viewState>ViewState</#if><#if passiveMode>Passive</#if>Fragment
