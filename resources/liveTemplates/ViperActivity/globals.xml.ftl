@@ -26,4 +26,8 @@
     <global
 		id="type"
 		value="${screenType?replace("Passive", "")}" />
+
+	<global
+		id="screenBaseName"
+		value="Viper<#if screenType?contains("Ai")><#if viewState>ViewState</#if>${screenType?replace("Passive", "")}<#if screenType?contains("Passive")>Passive</#if>Activity<#else>${screenType?replace("Passive", "")}<#if viewState>ViewState</#if><#if screenType?contains("Passive")>Passive</#if>Activity</#if>"/>
 </globals>
