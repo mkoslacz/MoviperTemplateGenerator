@@ -27,7 +27,7 @@
 		    <option id="Ai">Autoinject</option>
 		    <option id="ButterKnife">ButterKnife</option>
 		    <option id="DataBinding">DataBinding</option>
-			<option id="AiPassive">Passive autoinject</option>
+			<option id="AiPassive">Passive Autoinject</option>
 			<option id="ButterKnifePassive">Passive ButterKnife</option>
 			<option id="DataBindingPassive">Passive DataBinding</option>
 	</parameter>
@@ -36,7 +36,7 @@
         id="createViewHelper"
         name="Create ViewHelper for advanced Android transitions?"
         type="boolean"
-        default="true"
+        default="false"
         help="Create ViewHelper that allows Routing accessing Activity android.Views to allow Routing perform
         advanced transitions." />
 

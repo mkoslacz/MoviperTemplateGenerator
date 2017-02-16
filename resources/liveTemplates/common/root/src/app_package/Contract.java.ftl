@@ -2,17 +2,17 @@ package ${viperPackage}.<#if packagesPerUseCase>${classToResource(className)}<#e
 
 import android.app.Activity;
 import com.hannesdorfmann.mosby.mvp.MvpView;
-import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;
-import com.mateuszkoslacz.moviper.iface.interactor.ViperInteractor;
+<#if !passiveMode>import com.mateuszkoslacz.moviper.iface.presenter.ViperPresenter;
+</#if>import com.mateuszkoslacz.moviper.iface.interactor.ViperInteractor;
 import com.mateuszkoslacz.moviper.iface.presenter.routing.ViperPresenterForRouting;
 import com.mateuszkoslacz.moviper.iface.routing.ViperRouting;
 import com.mateuszkoslacz.moviper.iface.presenter.interactor.ViperPresenterForInteractor;
 
 <#if !packagesPerUseCase>public </#if>interface ${prefix}Contract {
 
-    interface Presenter extends ViperPresenter<View> {
+    <#if !passiveMode>interface Presenter extends ViperPresenter<View> {
 
-    }
+    }</#if>
 
     interface View extends MvpView {
         <#if viewState>interface State {  
