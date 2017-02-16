@@ -36,7 +36,7 @@
         id="createViewHelper"
         name="Create ViewHelper for advanced Android transitions?"
         type="boolean"
-        default="true"
+        default="false"
         help="Create ViewHelper that allows Routing accessing ViewHolder android.Views to allow Routing perform
         advanced transitions." />
 
