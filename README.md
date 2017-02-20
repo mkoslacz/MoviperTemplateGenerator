@@ -16,7 +16,7 @@ To use these templates you will need Android Studio.
 
 Copy the folders from `resources/liveTemplates` into `<androidStudio-folder>/plugins/android/lib/templates/other/` and they will appear in the project explorer context menu.
 
-Restart Android Studio, and you will find templates in: `New -> Other -> Moviper Viper managed Activity / Fragment`. Use the right click in location where you want your Activity/Fragment to be created.
+Restart Android Studio, and you will find templates in: `New -> Moviper -> ViperActivity / ViperFragment / ...`. Use the right click in location where you want your Activity/Fragment to be created.
 
 ## Why is it bundled as a InteliJ Plugin?
 
