@@ -1,6 +1,6 @@
 package ${viperPackage}.<#if packagesPerUseCase>${classToResource(className)}<#else>view.activity</#if>;
 
-import android.os.Bundle;
+<#if !passiveMode>import android.os.Bundle;</#if>
 import android.support.annotation.NonNull;
 <#if viewState>
 import com.hannesdorfmann.mosby.mvp.viewstate.ViewState;</#if>
@@ -19,12 +19,12 @@ public class ${prefix}Activity
         ${prefix}ViewState</#if><#if type?contains("DataBinding")>, 
         Activity${prefix}Binding</#if>>
         implements ${prefix}Contract.View<#if createViewHelper>, ${prefix}Contract.ViewHelper</#if> {
-
+    <#if !passiveMode>
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_${classToResource(className)});
-    }
+    }</#if>
 
     @NonNull
     @Override
